@@ -1,8 +1,14 @@
-package nuigalway.app;
+package test.java.nuigalway.app;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
 
 import org.junit.Test;
+
+import main.java.nuigalway.app.Module;
+import main.java.nuigalway.app.ProgrammingClass;
+import main.java.nuigalway.app.Student;
 
 /**
  * Unit test for simple App.
@@ -15,6 +21,10 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+    	Student student1 =  new Student("James", "21", "15/04/1998", "16384703", "ECE");
+    	student1.setUsername();
+        assertEquals(student1.getUsername() ,"James21");
+        
+        
     }
 }
