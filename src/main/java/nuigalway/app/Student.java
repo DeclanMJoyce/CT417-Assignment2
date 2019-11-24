@@ -1,5 +1,7 @@
 package main.java.nuigalway.app;
 
+import java.util.ArrayList;
+
 public class Student {
 
 	private String name;
@@ -8,7 +10,8 @@ public class Student {
 	private String id;
 	private String username;
 	private String course;
-	private String modules;
+	private ArrayList<Module> modules;
+    private ArrayList<Course> courses;
 	
 public Student(String name, String age, String dob, String id, String course) {
 		this.name = name;
@@ -59,20 +62,29 @@ public Student(String name, String age, String dob, String id, String course) {
 		this.username = username;
 	}
 
-	public String getCourses() {
+	public String getCourse() {
 		return course;
 	}
 
-	public void setCourses(String course) {
+	public void setCourse(String course) {
 		this.course = course;
 	}
 
-	public String getModules() {
+	public ArrayList<Module> getModules() {
 		return modules;
 	}
 
-	public void setModules(String modules) {
-		this.modules = modules;
+	public void setModules(Module module) {
+		this.modules.add(module);
 	}
 
+	public ArrayList<Course> getCourses() {
+		return courses;
+	}
+
+	public void setCourses(Course course) {
+		this.courses.add(course);
+	}
+
+	
 }
