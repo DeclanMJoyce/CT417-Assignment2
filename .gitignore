@@ -2,3 +2,5 @@
 .project
 .classpath
 target/
+src/main/java/nuigalway/app/App.java
+src/main/java/nuigalway/app/Test.java
