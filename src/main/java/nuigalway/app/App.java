@@ -1,4 +1,4 @@
-package nuigalway.app;
+package main.java.nuigalway.app;
 
 /**
  * Hello world!
