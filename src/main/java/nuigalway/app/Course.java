@@ -1,23 +1,25 @@
 package main.java.nuigalway.app;
 
 import java.util.ArrayList;
-import org.joda.time.DateTime;
-import java.util.Date;
+import org.joda.time.LocalDate;
 
 public class Course {
 
 	private String courseName;
-	private DateTime startDate;
-	private DateTime endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 
 	private ArrayList<Module> modules;
 	private ArrayList<Student> students;
 
-	public Course(String courseName, DateTime startDate, DateTime endDate) {
+	public Course(String courseName, LocalDate startDate, LocalDate endDate) {
 
 		this.courseName = courseName;
 		this.startDate = startDate;
 		this.endDate = endDate;
+		
+		students = new ArrayList<>();
+        modules = new ArrayList<>();
 
 	}
 
@@ -29,19 +31,19 @@ public class Course {
 		this.courseName = courseName;
 	}
 
-	public DateTime getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(DateTime startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
 
-	public DateTime getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(DateTime endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 
