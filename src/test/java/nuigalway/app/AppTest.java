@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 
 import org.joda.time.DateTime;
+import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.junit.Test;
 
@@ -61,18 +62,20 @@ public class AppTest
         eceModules.add(digitalSignalProcessing);
         eceModules.add(telecommunications);
         
+        
         ArrayList <Module> csitModules = new ArrayList();
         csitModules.add(softEngineering);
         csitModules.add(machineLearning);
         csitModules.add(artificialIntelligence);
         csitModules.add(rings);
         
-        Course ece = new Course("Electronic Engineering", DateTime.parse("01-09-2019",  DateTimeFormat.forPattern("dd/MM/yyyy")), DateTime.parse("31-05-2020",  DateTimeFormat.forPattern("dd/MM/yyyy")));
-        Course csit = new Course("Computer Science", DateTime.parse("01-09-2019",  DateTimeFormat.forPattern("dd/MM/yyyy")), DateTime.parse("31-05-2020",  DateTimeFormat.forPattern("dd/MM/yyyy")));
+        
+        Course ece = new Course("Electronic Engineering", new LocalDate(2019,9,01), new LocalDate(2020, 5, 31));
+        Course csit = new Course("Computer Science", new LocalDate(2019,9,01), new LocalDate(2020, 5, 31));
         
         assertEquals(ece.getCourseName() ,"Electronic Engineering");
-        assertEquals(csit.getStartDate() ,"01-09-2019");
-        assertEquals(ece.getStartDate() ,"31-05-2020");
+        assertEquals(csit.getStartDate() , new LocalDate(2019,9,01));
+        assertEquals(ece.getEndDate() ,new LocalDate(2020, 5, 31));
         
         ArrayList courses = new ArrayList();
         courses.add(ece);
@@ -97,5 +100,6 @@ public class AppTest
         csit.setStudents(student4);
         csit.setStudents(student5);
         csit.setStudents(student6);
+        
     }
 }
