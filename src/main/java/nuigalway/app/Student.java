@@ -19,6 +19,9 @@ public Student(String name, String age, String dob, String id, String course) {
 		this.dob = dob;
 		this.id = id;
 		this.course = course;
+		
+		modules = new ArrayList<>();
+        courses = new ArrayList<>();
 	}
 	
 	public String getName() {

@@ -12,6 +12,9 @@ public class Module {
 	public Module(String name, String id) {
 		this.name = name;
 		this.id = id;
+		
+		students = new ArrayList<>();
+        courses = new ArrayList<>();
 
 	}
 
